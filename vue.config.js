@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { merge } = require('webpack-merge')
+const merge = require('webpack-merge').default
 const tsImportPluginFactory = require('ts-import-plugin')
+const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
   chainWebpack: config => {
@@ -37,6 +38,14 @@ module.exports = {
           'font-size-lg': '17px',
           'button-primary-background-color': '#48c5d2'
         }
+      },
+      postcss: {
+        plugins: [
+          pxtorem({
+            rootValue: 37.5,
+            propList: ['*']
+          })
+        ]
       }
     }
   }

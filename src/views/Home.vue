@@ -2,9 +2,14 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Vue3 + TypeScript App" />
-    <van-button type="primary" size="large">大号按钮</van-button>
+    <van-button class="operation" type="primary" size="large"
+      >大号按钮</van-button
+    >
+    <br />
     <van-button type="primary" size="normal">普通按钮</van-button>
+    <br />
     <van-button type="primary" size="small">小型按钮</van-button>
+    <br />
     <van-button type="primary" size="mini">迷你按钮</van-button>
   </div>
 </template>
@@ -23,3 +28,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="less" scoped>
+.operation {
+  width: 200px;
+}
+</style>
